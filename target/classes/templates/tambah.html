@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Add student</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<div th:replace="fragments/fragment :: header"></div>
+	<h1 class="page-header">Problem Editor</h1>
+
+	<form action="/mahasiswa/tambah/submit" method="post">
+		<div>
+			<label for="nama">Nama Lengkap</label> <input type="text" name="nama" />
+		</div>
+		<div>
+			<label for="tempat">Tempat Lahir</label> <input type="text" name="tempat" />
+		</div>
+		<div>
+			<label for="tanggal">Tanggal Lahir</label> <input type="text" name="tanggal" />
+		</div>
+		<div>
+			<label for="jenkel">Jenis Kelamin</label> <input type="text" name="jenkel" />
+		</div>
+		<div>
+			<label for="agama">Agama</label> <input type="text" name="agama" />
+		</div>
+		<div>
+			<label for="goldar">Golongan Darah</label> <input type="text" name="goldar" />
+		</div>
+		<div>
+			<label for="tahun">Tahun Masuk</label> <input type="text" name="tahun" />
+		</div>
+		<div>
+			<label for="jalur">Jalur Masuk</label> <input type="text" name="jalur" />
+		</div>
+		<div>
+			<label for="idprodi">Id Program Studi</label> <input type="text" name="idprodi" />
+		</div>
+
+		<div>
+			<button type="submit" name="action" value="save">Save</button>
+		</div>
+	</form>
+	<div th:replace="fragments/fragment :: footer"></div>
+</body>
+
+</html>
+

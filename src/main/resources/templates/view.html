@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View Student by NPM</title>
+    </head>
+    <div th:replace="fragments/fragment :: header"></div>
+    <body>
+    	<h1 th:text="'Lihat Data Mahasiswa - ' + ${student.npm}"></h1>
+       	<h3 th:text="'NIK = ' + ${student.npm}">Student NPM</h3>
+       	<h3 th:text="'Name = ' + ${student.nama}">Student Name</h3>
+       	<h3 th:text="'Tempat/Tanggal Lahir = ' + ${student.tempat} + ' ' + ${student.tanggal}">Student Tempat/Tanggal Lahir</h3>
+       	<h3 th:text="'Program Studi = ' + ${student.prodi}">Student Prodi</h3>
+       	<h3 th:text="'Fakultas = ' + ${student.fakultas}">Student Fakultas</h3>
+       	<h3 th:text="'Universitas = ' + ${student.univ}">Student Universitas</h3>
+       	<h3 th:text="${student.jenkel.equals('1')} ? 'Jenis Kelamin = Laki-Laki':'Jenis Kelamin = Perempuan'">Student Jenis Kelamin</h3>
+       	<h3 th:text="'Agama = ' + ${student.agama}">Student Agama</h3>
+       	<h3 th:text="'Golongan Darah = ' + ${student.goldar}">Student Golongan darah</h3>
+       	<h3 th:text="'Tahun Masuk = ' + ${student.tahun}">Student Tahun Masuk</h3>
+       	<h3 th:text="'Jalur Masuk = ' + ${student.jalur}">Student Jalur Masuk</h3>
+       	<h3 th:text="'Status = ' + ${student.status}">Student Status</h3>
+    </body>
+    <div th:replace="fragments/fragment :: footer"></div>
+</html>
+
